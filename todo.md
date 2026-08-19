@@ -45,6 +45,12 @@
 - [x] Verify the headline, description, and call action stay aligned during scroll.
 - [x] Save the uniform-motion checkpoint.
 
+## Upward Hero Text Parallax
+
+- [x] Reverse the shared hero text parallax so it travels upward on scroll.
+- [x] Verify the hero text group moves upward while badges remain independent.
+- [x] Save the corrected parallax checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

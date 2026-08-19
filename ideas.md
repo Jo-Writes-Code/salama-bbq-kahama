@@ -41,3 +41,5 @@ The hero uses differential scroll parallax as a signature interaction: the headl
 The headline, descriptive copy, and call button travel independently on vertical tracks at a deliberately stronger range than the food image. This keeps the text depth perceptible without diagonal drift or movement outside its protected dark overlay.
 
 The complete hero text stack now moves as one uniform group on a shared vertical parallax track. Individual text elements retain only their initial staggered slide-in and settle into the group movement once visible.
+
+The shared hero text group travels upward as the page scrolls down, creating an intentional counterflow against the independent food-image and badge layers.

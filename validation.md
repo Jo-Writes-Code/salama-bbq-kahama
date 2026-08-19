@@ -15,3 +15,5 @@ The amplified text treatment was measured independently after scrolling. The hea
 The correction was verified after scrolling: headline, description, and call action horizontal offsets are all 0px, while their vertical parallax remains visible. The hero’s yellow circular badge continues to move independently on its vertical track.
 
 The uniform hero text motion was verified after scrolling. The shared hero-copy container moves by 50px vertically, while headline, description, and call-action transforms remain at 0px; the full text stack therefore stays aligned. The yellow hero badge keeps its separate vertical movement.
+
+The hero text parallax direction was reversed and verified after scrolling. The shared text group now has a -51px vertical offset, confirming that it travels upward as the page moves down. The yellow badge continues on its independent track.
