@@ -23,3 +23,5 @@ The food-and-drinks refresh was visually verified at desktop and mobile sizes. T
 The revised side-profile hero was visually checked at desktop and mobile sizes. It now shows char-grilled chicken as the right-side hero food, with colorful drinks and chicken samosas grouped around it. The updated “Flame first. Flavor follows.” slogan remains readable over the preserved left-side dark text field.
 
 The supplied menu-photo update was visually checked. `veg-pizza.jfif` appears on Vegetable Pizza, `mshikaki2.jfif` appears on Chips Mshikaki, and `ugali2.jfif` appears on Ugali & Beans.
+
+The supplied grill photo was cropped before its white foreground and added immediately above the legal footer. Desktop and mobile checks show the cook and grill as the visible focus without the original white lower area.

@@ -73,6 +73,13 @@
 - [x] Verify the correct image appears with each product.
 - [x] Save the supplied-photo menu checkpoint.
 
+## Bottom Grill Photo
+
+- [x] Crop the supplied mshikaki.jfif photo to remove the white foreground.
+- [x] Add the cropped grill photo to the bottom of the page.
+- [x] Verify the crop and footer-area presentation.
+- [x] Save the bottom-image checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
