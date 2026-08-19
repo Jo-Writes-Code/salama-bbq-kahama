@@ -33,3 +33,5 @@ The supplied Cabalar reference establishes the target level of expressive restau
 ## Style Decisions
 
 The full stacked **SALAMA / BBQ** wordmark and flame-grill badge remain visible as one lockup in the header. The flame-grill badge functions as a recurring seal in every main page section. Checkerboard bands, stamped labels, framed counter-sign panels, and subtle print texture are distributed across the page so the experience stays tactile and counter-made rather than drifting toward a generic restaurant template. The phone number is repeated as a readable ordering anchor as visitors move through the page.
+
+The opening is a white, media-first editorial stage: a large rounded food image appears before the primary copy, followed by a separate white information band for the headline, call action, and pickup context. This deliberately follows the structure of the supplied reference rather than using a dark split-screen hero.

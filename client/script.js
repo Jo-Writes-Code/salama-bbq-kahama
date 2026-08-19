@@ -1,7 +1,7 @@
 /*
   Salama BBQ — Ember Counter behavior
   Supports anchor-led single-page navigation, a compact mobile menu, active-section state,
-  menu-category filters, and direct tel: calls. No React or framework runtime is used.
+  a See Menu dialog, and direct tel: calls. No React or framework runtime is used.
 */
 
 const header = document.querySelector('.site-header');
@@ -9,8 +9,9 @@ const navToggle = document.querySelector('.nav-toggle');
 const mobilePanel = document.querySelector('.mobile-panel');
 const navLinks = [...document.querySelectorAll('[data-scroll-link]')];
 const sections = [...document.querySelectorAll('section[id]')];
-const filterButtons = [...document.querySelectorAll('[data-filter]')];
-const menuItems = [...document.querySelectorAll('.menu-item')];
+const menuDialog = document.querySelector('#full-menu');
+const menuTriggers = [...document.querySelectorAll('[data-menu-trigger]')];
+const menuClosers = [...document.querySelectorAll('[data-menu-close]')];
 
 function closeMenu() {
   document.body.classList.remove('menu-open');
@@ -39,19 +40,16 @@ mobilePanel?.addEventListener('click', (event) => {
   if (event.target instanceof HTMLAnchorElement) closeMenu();
 });
 
-filterButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const selected = button.dataset.filter || 'all';
-    filterButtons.forEach((item) => {
-      const active = item === button;
-      item.classList.toggle('is-active', active);
-      item.setAttribute('aria-pressed', String(active));
-    });
-    menuItems.forEach((item) => {
-      const visible = selected === 'all' || item.dataset.category === selected;
-      item.classList.toggle('is-hidden', !visible);
-    });
-  });
+menuTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => menuDialog?.showModal());
+});
+
+menuClosers.forEach((closer) => {
+  closer.addEventListener('click', () => menuDialog?.close());
+});
+
+menuDialog?.addEventListener('click', (event) => {
+  if (event.target === menuDialog) menuDialog.close();
 });
 
 const observer = new IntersectionObserver(
