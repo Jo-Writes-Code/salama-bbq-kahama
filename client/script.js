@@ -1,7 +1,7 @@
 /*
   Salama BBQ — Ember Counter behavior
   Supports anchor-led single-page navigation, a compact mobile menu, active-section state,
-  a See Menu dialog, and direct tel: calls. No React or framework runtime is used.
+  a See Menu dialog, accessible reveals, parallax accents, and direct tel: calls. No React or framework runtime is used.
 */
 
 const header = document.querySelector('.site-header');
@@ -12,6 +12,9 @@ const sections = [...document.querySelectorAll('section[id]')];
 const menuDialog = document.querySelector('#full-menu');
 const menuTriggers = [...document.querySelectorAll('[data-menu-trigger]')];
 const menuClosers = [...document.querySelectorAll('[data-menu-close]')];
+const revealItems = [...document.querySelectorAll('[data-reveal]')];
+const parallaxItems = [...document.querySelectorAll('[data-parallax]')];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 function closeMenu() {
   document.body.classList.remove('menu-open');
@@ -68,5 +71,48 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
-window.addEventListener('scroll', updateHeader, { passive: true });
+
+document.body.classList.add('js-motion');
+revealItems.forEach((item) => {
+  const delay = Number(item.dataset.delay || 0);
+  item.style.setProperty('--reveal-delay', `${delay}ms`);
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  },
+  { rootMargin: '0px 0px -10% 0px', threshold: 0.12 }
+);
+
+revealItems.forEach((item) => revealObserver.observe(item));
+
+let animationFrame;
+function updateParallax() {
+  animationFrame = undefined;
+  if (reduceMotion.matches) return;
+
+  const viewportMiddle = window.innerHeight / 2;
+  parallaxItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+    const speed = Number(item.dataset.parallax || 0.08);
+    const distance = Math.max(-1, Math.min(1, (rect.top + rect.height / 2 - viewportMiddle) / viewportMiddle));
+    item.style.setProperty('--parallax-y', `${Math.round(distance * speed * -120)}px`);
+  });
+}
+
+function requestMotionUpdate() {
+  updateHeader();
+  if (!animationFrame) animationFrame = window.requestAnimationFrame(updateParallax);
+}
+
+reduceMotion.addEventListener('change', requestMotionUpdate);
+window.addEventListener('scroll', requestMotionUpdate, { passive: true });
+window.addEventListener('resize', requestMotionUpdate);
 updateHeader();
+requestMotionUpdate();

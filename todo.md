@@ -7,6 +7,13 @@
 - [x] Verify the revised hero and menu at desktop and mobile sizes.
 - [x] Save a revised delivery checkpoint.
 
+## Motion Enhancement
+
+- [x] Restore the earlier left-side hero message and a direct call button.
+- [x] Add staggered text slide-ins and scroll parallax for hero and section accents.
+- [x] Validate motion behavior, reduced-motion support, and responsive layout.
+- [x] Save an animated revision checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

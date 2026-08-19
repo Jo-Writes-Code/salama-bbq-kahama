@@ -2,6 +2,7 @@
   Salama BBQ — Ember Counter visual system
   Reference-led direction: roadside barbecue signage, direct-flash food photography,
   Charcoal Forest + cream + fired-brick red, chunky condensed type, tactile outlined controls.
+  Motion: short staggered slide-ins plus scroll parallax on imagery and graphic seals.
 */
 
 :root {
@@ -227,6 +228,11 @@ button { font: inherit; }
   position: relative;
   max-width: 1480px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(360px, 0.85fr) minmax(0, 1.15fr);
+  min-height: min(660px, calc(100svh - 9rem));
+  align-items: stretch;
+  gap: clamp(1.3rem, 3vw, 3rem);
 }
 
 .hero-media {
@@ -245,14 +251,15 @@ button { font: inherit; }
   background: linear-gradient(90deg, rgba(16, 45, 37, 0.18), transparent 48%, rgba(16, 45, 37, 0.18));
 }
 
-.hero-media > img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: 52% 47%; display: block; }
+.hero-media > img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: 58% 47%; display: block; transform: translate3d(0, var(--parallax-y, 0px), 0) scale(1.08); will-change: transform; }
 .hero-seal { right: 1.2rem; bottom: 1.2rem; color: var(--forest); }
 
 .hero-editorial {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
-  gap: clamp(2rem, 7vw, 10rem);
-  padding: clamp(2.1rem, 5vw, 4.2rem) clamp(0.5rem, 3vw, 3rem) clamp(1rem, 2vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  padding: clamp(1rem, 4vw, 3.6rem) clamp(0.3rem, 2vw, 2rem);
 }
 
 .hero-copy {
@@ -282,7 +289,7 @@ button { font: inherit; }
   text-transform: uppercase;
 }
 
-.hero h1 { max-width: 760px; font-size: clamp(4.8rem, 10vw, 9.5rem); line-height: 0.77; }
+.hero h1 { max-width: 600px; font-size: clamp(4.8rem, 8.7vw, 8.3rem); line-height: 0.78; }
 .hero h1 em { color: var(--brick); font-style: normal; }
 
 .hero p { max-width: 500px; margin: 1.8rem 0 0; font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.6; }
@@ -303,7 +310,7 @@ button { font: inherit; }
 .order-button .phone-number { font-size: 1.1rem; letter-spacing: 0.08em; }
 .call-hint { color: rgba(16, 45, 37, 0.7); font-size: 0.74rem; font-weight: 600; }
 
-.hero-notes { display: grid; align-content: end; gap: 1.2rem; padding-bottom: 0.4rem; }
+.hero-notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: end; gap: 1rem; padding-bottom: 0.4rem; }
 .hero-notes p { margin: 0; padding-top: 0.8rem; border-top: 2px solid var(--forest); }
 .hero-notes b { display: block; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; }
 .hero-notes span { display: block; max-width: 270px; margin-top: 0.4rem; font-size: 0.88rem; line-height: 1.45; }
@@ -325,8 +332,11 @@ button { font: inherit; }
   line-height: 0.85;
   letter-spacing: 0.08em;
   text-align: center;
-  transform: rotate(11deg);
+  transform: translate3d(0, var(--parallax-y, 0px), 0) rotate(11deg);
+  will-change: transform;
 }
+
+.hero-seal { transform: translate3d(0, var(--parallax-y, 0px), 0) rotate(-6deg); will-change: transform; }
 
 .ticker { overflow: hidden; white-space: nowrap; border-block: 2px solid var(--forest); background: var(--mustard); color: var(--forest); }
 .ticker-track { display: inline-flex; min-width: max-content; animation: crawl 26s linear infinite; }
@@ -339,7 +349,7 @@ button { font: inherit; }
 .section-inner { position: relative; max-width: 1480px; margin: 0 auto; }
 .section-seal { position: absolute; display: grid; place-items: center; width: 72px; height: 72px; padding: 0.45rem; border: 2px solid var(--forest); border-radius: 50%; background: var(--mustard); box-shadow: 4px 4px 0 var(--forest); }
 .section-seal img { width: 100%; height: 100%; object-fit: contain; }
-.menu-seal { right: 0.5rem; top: 1.1rem; transform: rotate(9deg); }
+.menu-seal { right: 0.5rem; top: 1.1rem; transform: translate3d(0, var(--parallax-y, 0px), 0) rotate(9deg); will-change: transform; }
 
 .section-kicker { margin: 0 0 0.7rem; color: var(--brick); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.17em; text-transform: uppercase; }
 .section-title { max-width: 680px; font-size: clamp(3.6rem, 8vw, 6.8rem); line-height: 0.82; }
@@ -378,7 +388,7 @@ button { font: inherit; }
 .story { background: var(--brick); color: var(--cream); }
 .story .section-inner::before { position: absolute; top: -1.4rem; left: 46%; width: 92px; height: 92px; content: ""; background: url('/manus-storage/salama-bbq-mark_6d3c2060.png') center / contain no-repeat; filter: saturate(0) brightness(0) invert(1); opacity: 0.9; transform: rotate(-12deg); }
 .story-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(2rem, 6vw, 7rem); align-items: center; }
-.story-visual { position: relative; min-height: 510px; }
+.story-visual { position: relative; min-height: 510px; transform: translate3d(0, var(--parallax-y, 0px), 0); will-change: transform; }
 .story-visual img { width: min(100%, 600px); height: 100%; max-height: 600px; object-fit: cover; border: 2px solid var(--cream); border-radius: 1.35rem; transform: rotate(-3deg); }
 .story-label { position: absolute; left: 0; top: 12%; display: grid; place-items: center; width: 125px; aspect-ratio: 1; border: 2px solid var(--cream); border-radius: 50%; background: var(--forest); color: var(--cream); font-family: var(--display); font-size: 1.35rem; letter-spacing: 0.1em; line-height: 0.82; text-align: center; transform: rotate(10deg); }
 .story .section-kicker { color: var(--mustard); }
@@ -403,7 +413,7 @@ button { font: inherit; }
 .visit-meta b { display: block; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
 .visit-meta span { display: block; margin-top: 0.2rem; color: rgba(247, 240, 223, 0.82); font-size: 0.9rem; line-height: 1.45; }
 
-.visit-call { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.visit-call { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; transform: translate3d(0, var(--parallax-y, 0px), 0); will-change: transform; }
 .visit-call .section-kicker { color: var(--forest); }
 .callout-title { max-width: 430px; font-size: clamp(3.4rem, 6.5vw, 5.7rem); line-height: 0.82; }
 .callout-title span { color: var(--brick); }
@@ -426,11 +436,23 @@ button { font: inherit; }
 
 :focus-visible { outline: 3px solid var(--ember); outline-offset: 3px; }
 
+.js-motion [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 500ms var(--ease-out), transform 560ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js-motion [data-reveal="left"] { transform: translate3d(-32px, 0, 0); }
+.js-motion [data-reveal="right"] { transform: translate3d(32px, 0, 0); }
+.js-motion [data-reveal].is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
 @media (max-width: 900px) {
   .nav-links, .site-header .call-pill { display: none; }
   .nav-toggle { display: inline-grid; place-items: center; }
   .mobile-panel { display: block; }
-  .hero-editorial { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-wrap { grid-template-columns: 1fr; min-height: auto; gap: 1.4rem; }
+  .hero-editorial { gap: 2rem; }
   .hero-copy { min-height: 0; }
   .hero-notes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
   .menu-heading { display: block; }
@@ -451,8 +473,8 @@ button { font: inherit; }
   .brand-type { min-width: 63px; font-size: 1.84rem; }
   .brand-type small { font-size: 0.92rem; }
   .hero { padding-inline: 0.7rem; padding-bottom: 0.7rem; }
+  .hero-editorial { gap: 1.65rem; padding: 0.2rem 0.35rem 1rem; }
   .hero-media { min-height: 260px; border-radius: 1.25rem; }
-  .hero-editorial { gap: 1.65rem; padding: 2rem 0.35rem 1rem; }
   .hero-copy { padding: 0; }
   .hero h1 { font-size: clamp(4.25rem, 19vw, 6.3rem); }
   .hero-actions { align-items: flex-start; flex-direction: column; }
@@ -472,4 +494,5 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 1ms !important; }
+  [data-parallax] { transform: none !important; }
 }
