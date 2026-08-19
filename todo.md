@@ -27,6 +27,12 @@
 - [x] Verify the enhanced motion across desktop and mobile with reduced-motion support.
 - [x] Save the enhanced motion checkpoint.
 
+## Amplified Text Parallax
+
+- [x] Increase the hero headline, description, and call-action parallax so the motion is readily noticeable.
+- [x] Verify the amplified text movement and reduced-motion fallback.
+- [x] Save the amplified parallax checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

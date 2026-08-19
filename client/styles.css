@@ -267,9 +267,9 @@ button { font: inherit; }
 .hero-copy {
   position: relative;
   padding: 0;
-  transform: translate3d(0, var(--parallax-y, 0px), 0);
-  will-change: transform;
 }
+
+.hero-copy [data-parallax] { transform: translate3d(var(--parallax-x, 0px), var(--parallax-y, 0px), 0); will-change: transform; }
 
 .eyebrow {
   display: inline-flex;
@@ -445,6 +445,7 @@ button { font: inherit; }
 .js-motion [data-reveal="left"] { transform: translate3d(-32px, 0, 0); }
 .js-motion [data-reveal="right"] { transform: translate3d(32px, 0, 0); }
 .js-motion [data-reveal].is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+.js-motion .hero-copy [data-reveal][data-parallax].is-visible { transform: translate3d(var(--parallax-x, 0px), var(--parallax-y, 0px), 0); }
 
 @media (max-width: 900px) {
   .nav-links, .site-header .call-pill { display: none; }

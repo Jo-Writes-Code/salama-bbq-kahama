@@ -9,3 +9,5 @@ The animated revision was checked on the live page. The restored hero shows the 
 The refined hero was visually checked at desktop and mobile sizes. The title and call button now sit directly over the large food image with a dark image overlay for readable contrast. The “Taking calls for pickup” text has been removed, and the image has returned to a large hero presentation.
 
 The stronger hero parallax was measured after scrolling. The headline/call stack shifted by 29px, the food image by 19px, the yellow “Hot off the Grill” circle by -32px, and the flame-grill seal by 14px, creating the requested differential motion while retaining the reduced-motion safeguard.
+
+The amplified text treatment was measured independently after scrolling. The headline now shifts by 77px vertically and 27px horizontally, while the description and call action follow separate motion paths. This makes the text parallax visibly stronger than the image’s movement without compromising its contrast overlay.
