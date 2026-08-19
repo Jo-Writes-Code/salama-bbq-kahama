@@ -51,6 +51,14 @@
 - [x] Verify the hero text group moves upward while badges remain independent.
 - [x] Save the corrected parallax checkpoint.
 
+## Food & Drinks Refresh
+
+- [x] Generate a dark studio hero image of colorful fruit drinks and chicken samosas with left-side text space.
+- [x] Generate dedicated imagery for Vegetable Pizza, Chips Mshikaki, and Ugali & Beans.
+- [x] Replace the three menu products and hero visual while retaining the current composition.
+- [x] Verify the refreshed image treatment on desktop and mobile.
+- [x] Save the refreshed food-and-drinks checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

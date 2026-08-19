@@ -17,3 +17,5 @@ The correction was verified after scrolling: headline, description, and call act
 The uniform hero text motion was verified after scrolling. The shared hero-copy container moves by 50px vertically, while headline, description, and call-action transforms remain at 0px; the full text stack therefore stays aligned. The yellow hero badge keeps its separate vertical movement.
 
 The hero text parallax direction was reversed and verified after scrolling. The shared text group now has a -51px vertical offset, confirming that it travels upward as the page moves down. The yellow badge continues on its independent track.
+
+The food-and-drinks refresh was visually verified at desktop and mobile sizes. The hero now retains its dark studio composition and left-side text-safe space while displaying colorful fruit drinks, fruit cross-sections, and chicken samosas to the right. The three menu cards show Vegetable Pizza, Chips Mshikaki, and Ugali & Beans with their dedicated food imagery.
