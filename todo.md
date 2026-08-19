@@ -14,6 +14,13 @@
 - [x] Validate motion behavior, reduced-motion support, and responsive layout.
 - [x] Save an animated revision checkpoint.
 
+## Hero Overlay Refinement
+
+- [x] Move the hero headline and call action onto the large food image.
+- [x] Remove the “Taking calls for pickup” label and restore the larger image presentation.
+- [x] Verify the image-overlay hero at desktop and mobile sizes.
+- [x] Save the refined hero checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
