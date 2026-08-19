@@ -102,7 +102,8 @@ function updateParallax() {
     if (rect.bottom < 0 || rect.top > window.innerHeight) return;
     const speed = Number(item.dataset.parallax || 0.08);
     const distance = Math.max(-1, Math.min(1, (rect.top + rect.height / 2 - viewportMiddle) / viewportMiddle));
-    item.style.setProperty('--parallax-y', `${Math.round(distance * speed * -120)}px`);
+    const intensity = item.closest('.hero') ? 170 : 120;
+    item.style.setProperty('--parallax-y', `${Math.round(distance * speed * -intensity)}px`);
   });
 }
 

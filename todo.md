@@ -21,6 +21,12 @@
 - [x] Verify the image-overlay hero at desktop and mobile sizes.
 - [x] Save the refined hero checkpoint.
 
+## Stronger Hero Parallax
+
+- [x] Add higher-contrast scroll parallax to hero text, call action, and circular badges.
+- [x] Verify the enhanced motion across desktop and mobile with reduced-motion support.
+- [x] Save the enhanced motion checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

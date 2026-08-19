@@ -267,6 +267,8 @@ button { font: inherit; }
 .hero-copy {
   position: relative;
   padding: 0;
+  transform: translate3d(0, var(--parallax-y, 0px), 0);
+  will-change: transform;
 }
 
 .eyebrow {
