@@ -66,6 +66,13 @@
 - [x] Verify the new side-profile hero at desktop and mobile sizes.
 - [x] Save the revised hero checkpoint.
 
+## Supplied Menu Photos
+
+- [x] Store and map veg-pizza.jfif to Vegetable Pizza, mshikaki2.jfif to Chips Mshikaki, and ugali2.jfif to Ugali & Beans.
+- [x] Update the three menu cards to use the supplied product images.
+- [x] Verify the correct image appears with each product.
+- [x] Save the supplied-photo menu checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
