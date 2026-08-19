@@ -33,6 +33,12 @@
 - [x] Verify the amplified text movement and reduced-motion fallback.
 - [x] Save the amplified parallax checkpoint.
 
+## Vertical Text Motion Correction
+
+- [x] Remove horizontal hero text drift while retaining visible vertical parallax.
+- [x] Verify the corrected text track and circular badge motion.
+- [x] Save the corrected motion checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

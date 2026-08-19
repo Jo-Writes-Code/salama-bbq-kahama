@@ -38,4 +38,4 @@ The opening is a white, media-first editorial stage: a large rounded food image 
 
 The hero uses differential scroll parallax as a signature interaction: the headline/call stack, food image, yellow circular “Hot off the Grill” badge, and flame-grill seal travel at distinct speeds. The text remains inside the dark image overlay for contrast and all motion is removed for visitors who prefer reduced motion.
 
-The headline, descriptive copy, and call button travel independently on both the vertical and horizontal axes at a deliberately stronger range than the food image. This makes the text depth perceptible without forcing the text outside its protected dark overlay.
+The headline, descriptive copy, and call button travel independently on vertical tracks at a deliberately stronger range than the food image. This keeps the text depth perceptible without diagonal drift or movement outside its protected dark overlay.

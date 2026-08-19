@@ -11,3 +11,5 @@ The refined hero was visually checked at desktop and mobile sizes. The title and
 The stronger hero parallax was measured after scrolling. The headline/call stack shifted by 29px, the food image by 19px, the yellow “Hot off the Grill” circle by -32px, and the flame-grill seal by 14px, creating the requested differential motion while retaining the reduced-motion safeguard.
 
 The amplified text treatment was measured independently after scrolling. The headline now shifts by 77px vertically and 27px horizontally, while the description and call action follow separate motion paths. This makes the text parallax visibly stronger than the image’s movement without compromising its contrast overlay.
+
+The correction was verified after scrolling: headline, description, and call action horizontal offsets are all 0px, while their vertical parallax remains visible. The hero’s yellow circular badge continues to move independently on its vertical track.
