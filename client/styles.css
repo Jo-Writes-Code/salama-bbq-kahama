@@ -294,7 +294,7 @@ button { font: inherit; }
 }
 
 .hero h1 { max-width: 600px; font-size: clamp(4.8rem, 8.7vw, 8.3rem); line-height: 0.78; color: var(--cream); }
-.hero h1 em { color: var(--brick); font-style: normal; }
+.hero h1 em { margin-left: 0.11em; color: var(--brick); font-style: normal; }
 
 .hero p { max-width: 500px; margin: 1.8rem 0 0; color: rgba(247, 240, 223, 0.9); font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.6; }
 

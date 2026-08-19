@@ -59,6 +59,13 @@
 - [x] Verify the refreshed image treatment on desktop and mobile.
 - [x] Save the refreshed food-and-drinks checkpoint.
 
+## Side-Profile Chicken Hero
+
+- [x] Generate a dark side-profile hero image with chicken, colorful drinks, and samosas grouped on the right.
+- [x] Replace the current hero slogan and supporting copy.
+- [x] Verify the new side-profile hero at desktop and mobile sizes.
+- [x] Save the revised hero checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
