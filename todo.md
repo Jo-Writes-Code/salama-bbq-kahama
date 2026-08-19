@@ -80,6 +80,13 @@
 - [x] Verify the crop and footer-area presentation.
 - [x] Save the bottom-image checkpoint.
 
+## Story Image Placement Correction
+
+- [x] Replace the “Fast food with a little fire in it.” image with the cropped supplied grill photo.
+- [x] Remove the duplicate grill-photo block above the legal footer.
+- [x] Verify the corrected image placement at desktop and mobile sizes.
+- [x] Save the corrected placement checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

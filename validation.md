@@ -25,3 +25,5 @@ The revised side-profile hero was visually checked at desktop and mobile sizes. 
 The supplied menu-photo update was visually checked. `veg-pizza.jfif` appears on Vegetable Pizza, `mshikaki2.jfif` appears on Chips Mshikaki, and `ugali2.jfif` appears on Ugali & Beans.
 
 The supplied grill photo was cropped before its white foreground and added immediately above the legal footer. Desktop and mobile checks show the cook and grill as the visible focus without the original white lower area.
+
+The placement correction was visually verified at desktop and mobile sizes. The cropped supplied grill photo now replaces the image in the “Fast food with a little fire in it.” section, and the duplicate bottom-of-page grill block has been removed.

@@ -419,13 +419,6 @@ button { font: inherit; }
 .visit-call p { max-width: 370px; margin: 1.15rem 0 0; line-height: 1.55; }
 .mini-call { display: inline-flex; align-items: center; gap: 0.7rem; margin-top: 1.8rem; padding: 0.85rem 1rem; border-radius: 0.75rem; background: var(--brick); color: var(--cream); font-size: 0.85rem; }
 
-.bottom-grill-photo { padding: 0 clamp(0.9rem, 3vw, 3rem) clamp(1rem, 2vw, 2rem); background: var(--cream); }
-.bottom-grill-photo-inner { position: relative; max-width: 1480px; height: clamp(300px, 38vw, 525px); margin: 0 auto; overflow: hidden; border: 2px solid var(--forest); border-radius: 1.5rem; background: var(--forest); }
-.bottom-grill-photo-inner::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(5, 20, 15, 0.66), transparent 60%); pointer-events: none; }
-.bottom-grill-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 44%; display: block; filter: saturate(0.95) contrast(1.04); }
-.bottom-grill-photo p { position: absolute; z-index: 1; left: clamp(1.25rem, 4vw, 4rem); bottom: clamp(1.25rem, 4vw, 3.5rem); max-width: 230px; margin: 0; color: var(--cream); font-family: var(--display); font-size: clamp(2.25rem, 4.2vw, 4.4rem); line-height: 0.82; letter-spacing: 0.04em; text-transform: uppercase; }
-.bottom-grill-photo p span { display: block; margin-bottom: 0.45rem; color: var(--mustard); font-family: var(--body); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.16em; line-height: 1; }
-
 .site-footer { padding: 2.4rem clamp(0.9rem, 3vw, 3rem) 5.7rem; border-top: 2px solid var(--forest); background: var(--cream); }
 .footer-inner { max-width: 1480px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; }
 .footer-brand { display: flex; align-items: center; gap: 0.7rem; }
@@ -491,9 +484,6 @@ button { font: inherit; }
   .menu-card-image { height: 250px; }
   .menu-card-copy { min-height: 160px; }
   .menu-action-row { align-items: flex-start; flex-direction: column; margin-top: 2rem; }
-  .bottom-grill-photo { padding-inline: 0.7rem; }
-  .bottom-grill-photo-inner { height: 300px; border-radius: 1.15rem; }
-  .bottom-grill-photo img { object-position: center 38%; }
   .story-visual { min-height: 350px; }
   .story-visual img { max-height: 390px; }
   .story-list { grid-template-columns: 1fr; gap: 0.8rem; }
