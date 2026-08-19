@@ -39,6 +39,12 @@
 - [x] Verify the corrected text track and circular badge motion.
 - [x] Save the corrected motion checkpoint.
 
+## Uniform Hero Text Motion
+
+- [x] Move the complete hero text stack on one shared vertical parallax track.
+- [x] Verify the headline, description, and call action stay aligned during scroll.
+- [x] Save the uniform-motion checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
