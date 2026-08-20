@@ -472,13 +472,13 @@ body.dark-theme {
 }
 
 body.dark-theme .site-header,
-body.dark-theme .site-header.is-scrolled { background: rgba(11, 25, 20, 0.96); border-bottom-color: rgba(247, 240, 223, 0.16); }
+body.dark-theme .site-header.is-scrolled { background: rgba(11, 25, 20, 0.96); border-bottom-color: transparent; }
 body.dark-theme .brand-type small { color: var(--ember); }
 body.dark-theme .nav-link::after { background: var(--mustard); }
 body.dark-theme .mobile-panel { background: #13261f; box-shadow: 7px 7px 0 #050e0a; }
 body.dark-theme .mobile-panel a:last-child { background: #1e7b4b; }
 body.dark-theme .hero, body.dark-theme .visit, body.dark-theme .site-footer { background: #0b1914; }
-body.dark-theme .hero-media { border-color: #255941; }
+body.dark-theme .hero-media { border-color: #050e0a; }
 body.dark-theme .hero-media::after { background: linear-gradient(90deg, rgba(5, 20, 15, 0.93) 0%, rgba(8, 29, 22, 0.76) 32%, rgba(8, 29, 22, 0.12) 63%, rgba(8, 29, 22, 0.04) 100%); }
 body.dark-theme .hero h1 { color: #f7f0df; }
 body.dark-theme .hero h1 em { color: #e25e49; }
@@ -486,30 +486,30 @@ body.dark-theme .hero p, body.dark-theme .call-hint { color: rgba(247, 240, 223,
 body.dark-theme .order-button { background: #f7f0df; color: #102d25; border-color: #f7f0df; }
 body.dark-theme .hero-seal { background: #f7f0df; color: #102d25; }
 body.dark-theme .call-pill, body.dark-theme .mini-call, body.dark-theme .floating-call { color: #fffaf0; }
-body.dark-theme .ticker { border-color: #255941; background: #173c2d; color: #dfb84c; }
+body.dark-theme .ticker { border-color: transparent; background: #173c2d; color: #dfb84c; }
 body.dark-theme .ticker-dot { color: #d56846; }
-body.dark-theme .section-seal { border-color: #255941; box-shadow: 4px 4px 0 #07140f; }
-body.dark-theme .menu-card, body.dark-theme .menu-dialog { border-color: #255941; background: #172e26; }
-body.dark-theme .menu-card { box-shadow: 5px 5px 0 #07140f; }
-body.dark-theme .menu-card:hover { box-shadow: 8px 8px 0 #255941; }
+body.dark-theme .section-seal { border-color: transparent; box-shadow: none; }
+body.dark-theme .menu-card, body.dark-theme .menu-dialog { border-color: transparent; background: #172e26; }
+body.dark-theme .menu-card { box-shadow: none; }
+body.dark-theme .menu-card:hover { box-shadow: none; }
 body.dark-theme .menu-card-copy strong, body.dark-theme .dialog-menu-list span { color: var(--ember); }
 body.dark-theme .dialog-close { background: #10251e; }
-body.dark-theme .menu-action-row { border-color: #255941; }
-body.dark-theme .see-menu-button { border-color: #1e7b4b; background: #1e7b4b; color: #fffaf0; }
-body.dark-theme .visit-panel { border-color: #255941; background: #142e23; }
+body.dark-theme .menu-action-row { border-color: transparent; }
+body.dark-theme .see-menu-button { border-color: transparent; background: #1e7b4b; color: #fffaf0; }
+body.dark-theme .visit-panel { border-color: #050e0a; background: #142e23; }
 body.dark-theme .visit-panel::before { display: none; }
 body.dark-theme .visit-info { background: #10251e; color: #f7f0df; }
 body.dark-theme .visit-info .section-title { color: #f7f0df; }
 body.dark-theme .visit-call { background: repeating-linear-gradient(45deg, #173c2d 0 24px, #142e23 24px 48px); color: #f7f0df; }
 body.dark-theme .visit-call .section-kicker { color: #dfb84c; }
 body.dark-theme .callout-title span { color: #e25e49; }
-body.dark-theme .mini-call { border-color: #1e7b4b; background: #1e7b4b; }
-body.dark-theme .floating-call { border-color: #1e7b4b; background: #1e7b4b; box-shadow: 4px 4px 0 #07140f; }
-body.dark-theme .site-footer { border-color: #255941; }
+body.dark-theme .mini-call { border-color: transparent; background: #1e7b4b; }
+body.dark-theme .floating-call { border-color: transparent; background: #1e7b4b; box-shadow: none; }
+body.dark-theme .site-footer { border-color: transparent; }
 body.dark-theme .footer-legal { color: rgba(247, 240, 223, 0.65); }
 body.dark-theme .theme-icon-sun { display: none; }
 body.dark-theme .theme-icon-moon { display: block; }
-body.dark-theme .utility-button, body.dark-theme .language-toggle { border-color: var(--forest); }
+body.dark-theme .utility-button, body.dark-theme .language-toggle { border-color: transparent; background: #142e23; }
 body.dark-theme .utility-button:hover, body.dark-theme .language-toggle:hover { background: var(--forest); color: #10251e; }
 
 .js-motion [data-reveal] {

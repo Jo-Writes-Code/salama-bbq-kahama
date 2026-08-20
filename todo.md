@@ -102,6 +102,13 @@
 - [x] Verify the refined dark theme and language-control behavior on desktop and mobile.
 - [x] Save the refined Kiswahili-default checkpoint.
 
+## Dark-Mode Border Simplification
+
+- [x] Remove nonessential dark-mode borders across the page.
+- [x] Keep only near-black borders on the hero and bottom call-to-order panel.
+- [x] Verify the simplified border treatment on desktop and mobile.
+- [x] Save the dark-border refinement checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

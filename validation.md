@@ -37,3 +37,5 @@ The dark-theme correction was checked live. The Kiswahili hero title now renders
 The Tanzania-localized page was also checked at mobile size. The green navigation call CTA, TZS menu prices, Kahama, Shinyanga, Tanzania location, and compact theme/language controls remain readable and reachable.
 
 The refined language control was tested live: when the site is in Kiswahili, the control says EN; after switching to English, it says SW. The refined dark mode now uses subdued green hero, ticker, menu-card, and call-panel borders without bright white outlines or high-luminance yellow stripe fields.
+
+The final border simplification was measured in dark mode. The hero and lower call-to-order panel each retain a 2px near-black border (`rgb(5, 14, 10)`), while the menu cards, menu action row, and ticker borders are transparent.
