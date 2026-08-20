@@ -141,6 +141,12 @@
 - [x] Verify the bilingual labels, dark frame, and scroll cue across themes and viewports.
 - [x] Save the concise-calls and scroll-cue checkpoint.
 
+## Desktop Scroll-Cue Visibility
+
+- [x] Correct the desktop scroll-cue placement so it remains visible at the top of the page.
+- [x] Verify the revised cue at desktop and mobile widths.
+- [x] Save the desktop scroll-cue correction checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

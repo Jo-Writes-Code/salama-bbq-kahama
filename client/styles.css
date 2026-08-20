@@ -305,6 +305,14 @@ button { font: inherit; }
 .scroll-cue:hover { background: var(--forest); color: var(--cream); }
 .scroll-cue.is-hidden { visibility: hidden; opacity: 0; pointer-events: none; }
 
+/* Ember Counter reminder: desktop cue is a persistent, high-contrast scroll invitation; mobile remains hero-bound. */
+@media (min-width: 901px) {
+  .scroll-cue {
+    position: fixed;
+    bottom: 1.5rem;
+  }
+}
+
 @keyframes scroll-nudge {
   0%, 100% { transform: translateY(-3px); }
   50% { transform: translateY(5px); }
