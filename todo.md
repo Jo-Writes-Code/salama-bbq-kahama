@@ -161,6 +161,13 @@
 - [x] Verify local asset loading and responsive behavior in the standalone build.
 - [x] Save the standalone-project checkpoint.
 
+## Vercel Deployment 404
+
+- [x] Diagnose the external-host 404 response and current deployment contract.
+- [x] Add static Vercel deployment configuration for the standalone site.
+- [x] Verify the production output has a deployable index and local image assets.
+- [x] Save the external-host deployment fix.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
