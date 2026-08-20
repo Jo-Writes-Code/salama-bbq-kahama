@@ -127,6 +127,12 @@
 - [x] Verify the circles remain visible at desktop and mobile sizes.
 - [x] Save the hero-circle overflow checkpoint.
 
+## Mobile Hero Fit
+
+- [x] Reduce narrow mobile hero type and call-action sizing so the stack stays within the image frame.
+- [x] Verify the mobile hero no longer protrudes beyond the image frame.
+- [x] Save the mobile hero-fit checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

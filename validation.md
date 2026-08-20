@@ -45,3 +45,5 @@ The three menu cards retain their borderless presentation and now regain a deep 
 The refreshed slogan was checked in both language modes: “Grill. Sip. Repeat.” in English and “Choma. Kunywa. Rudia.” in Kiswahili. Both remain legible within the hero image’s protected left-side text area.
 
 The hero image clip and circle overlay layers were checked at desktop and mobile sizes. The photo remains framed, while both circular hero overlays are outside the image clip and stay visible when moving beyond its bounds.
+
+The narrow 320px mobile hero was verified after reducing the hero typography, spacing, and call button sizing. The headline, description, call button, and supporting hint remain fully within the image frame.
