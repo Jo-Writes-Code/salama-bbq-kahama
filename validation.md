@@ -43,3 +43,5 @@ The final border simplification was measured in dark mode. The hero and lower ca
 The three menu cards retain their borderless presentation and now regain a deep dark hover shadow, increasing from a subtle 5px offset to a 10px near-black offset on hover.
 
 The refreshed slogan was checked in both language modes: “Grill. Sip. Repeat.” in English and “Choma. Kunywa. Rudia.” in Kiswahili. Both remain legible within the hero image’s protected left-side text area.
+
+The hero image clip and circle overlay layers were checked at desktop and mobile sizes. The photo remains framed, while both circular hero overlays are outside the image clip and stay visible when moving beyond its bounds.

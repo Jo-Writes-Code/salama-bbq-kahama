@@ -121,6 +121,12 @@
 - [x] Verify the new slogan stays legible in both language modes.
 - [x] Save the slogan-refresh checkpoint.
 
+## Hero Circle Overflow
+
+- [x] Allow the hero circles to overflow the image frame during parallax movement.
+- [x] Verify the circles remain visible at desktop and mobile sizes.
+- [x] Save the hero-circle overflow checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
