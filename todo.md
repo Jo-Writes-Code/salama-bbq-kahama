@@ -95,6 +95,13 @@
 - [x] Verify the localized content and navigation controls on desktop and mobile.
 - [x] Save the Tanzania-localized checkpoint.
 
+## Kiswahili Default & Dark-Theme Refinement
+
+- [x] Make Kiswahili the default language and show the target language on the EN/SW control.
+- [x] Remove bright dark-mode borders, surfaces, and visit-panel stripe treatment.
+- [x] Verify the refined dark theme and language-control behavior on desktop and mobile.
+- [x] Save the refined Kiswahili-default checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

@@ -19,7 +19,6 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const themeToggle = document.querySelector('[data-theme-toggle]');
 const languageToggle = document.querySelector('[data-lang-toggle]');
 const languageLabel = document.querySelector('[data-language-label]');
-const languageAlt = document.querySelector('[data-language-alt]');
 
 const translations = {
   en: {
@@ -83,8 +82,7 @@ function setLanguage(language) {
   });
 
   const isSwahili = language === 'sw';
-  languageLabel.textContent = isSwahili ? 'SW' : 'EN';
-  languageAlt.textContent = isSwahili ? 'EN' : 'SW';
+  languageLabel.textContent = isSwahili ? 'EN' : 'SW';
   languageToggle?.setAttribute('aria-pressed', String(isSwahili));
   languageToggle?.setAttribute('aria-label', isSwahili ? 'Switch language to English' : 'Switch language to Kiswahili');
   localStorage.setItem('salama-language', language);
@@ -99,7 +97,7 @@ languageToggle?.addEventListener('click', () => {
 });
 
 setTheme(localStorage.getItem('salama-theme') || 'light');
-setLanguage(localStorage.getItem('salama-language') || 'en');
+setLanguage(localStorage.getItem('salama-language') || 'sw');
 
 function closeMenu() {
   document.body.classList.remove('menu-open');
