@@ -23,7 +23,7 @@ const languageLabel = document.querySelector('[data-language-label]');
 const translations = {
   en: {
     nav_home: 'Home', nav_menu: 'Menu', nav_our_way: 'Our Way', nav_visit: 'Visit', nav_visit_hours: 'Visit & Hours',
-    call_to_order: 'Call to order', hero_title_one: 'Flame first.', hero_title_two: 'Flavor follows.',
+    call_to_order: 'Call to order', hero_title_one: 'Grill. Sip.', hero_title_two: 'Repeat.',
     hero_description: 'Char-grilled chicken, colorful pours, and crisp chicken samosas. Call to order and we’ll fire it fresh.',
     hero_hint: 'Fresh food. No accounts. No fuss.', ticker_one: 'SMASHED. SAUCED. SENT.', ticker_two: 'CALL TO ORDER', ticker_three: 'CHARCOAL, CRISP, & READY',
     menu_kicker: 'Three good reasons', menu_title: 'Go with your craving.',
@@ -43,7 +43,7 @@ const translations = {
   },
   sw: {
     nav_home: 'Mwanzo', nav_menu: 'Menyu', nav_our_way: 'Namna Yetu', nav_visit: 'Tufikie', nav_visit_hours: 'Tufikie & Saa',
-    call_to_order: 'Piga kuagiza', hero_title_one: 'Moto kwanza.', hero_title_two: 'Ladha inafuata.',
+    call_to_order: 'Piga kuagiza', hero_title_one: 'Choma. Kunywa.', hero_title_two: 'Rudia.',
     hero_description: 'Kuku wa kuchoma, vinywaji vya rangi na sambusa za kuku. Piga kuagiza, tutapika moto moto.',
     hero_hint: 'Chakula kipya. Hakuna akaunti. Hakuna usumbufu.', ticker_one: 'CHOMA. MCHUZI. TUMA.', ticker_two: 'PIGA KUAGIZA', ticker_three: 'MAKAA, CRISPY, TAYARI',
     menu_kicker: 'Sababu tatu za kuanza', menu_title: 'Chagua unachotamani.',

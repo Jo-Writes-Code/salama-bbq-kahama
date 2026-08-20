@@ -44,4 +44,4 @@ The complete hero text stack now moves as one uniform group on a shared vertical
 
 The shared hero text group travels upward as the page scrolls down, creating an intentional counterflow against the independent food-image and badge layers.
 
-The hero now leads with “Flame first. Flavor follows.” and uses a low, side-profile studio composition: chicken is the hero food on the right, with colorful drinks and samosas behind and beside it. The left remains a protected deep-charcoal text field.
+The hero now leads with “Grill. Sip. Repeat.” and uses a low, side-profile studio composition: chicken is the hero food on the right, with colorful drinks and samosas behind and beside it. The left remains a protected deep-charcoal text field.

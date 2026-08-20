@@ -41,3 +41,5 @@ The refined language control was tested live: when the site is in Kiswahili, the
 The final border simplification was measured in dark mode. The hero and lower call-to-order panel each retain a 2px near-black border (`rgb(5, 14, 10)`), while the menu cards, menu action row, and ticker borders are transparent.
 
 The three menu cards retain their borderless presentation and now regain a deep dark hover shadow, increasing from a subtle 5px offset to a 10px near-black offset on hover.
+
+The refreshed slogan was checked in both language modes: “Grill. Sip. Repeat.” in English and “Choma. Kunywa. Rudia.” in Kiswahili. Both remain legible within the hero image’s protected left-side text area.

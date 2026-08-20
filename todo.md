@@ -115,6 +115,12 @@
 - [x] Verify the restored hover interaction.
 - [x] Save the hover-effect checkpoint.
 
+## Hero Slogan Refresh
+
+- [x] Replace the hero slogan in English and Kiswahili.
+- [x] Verify the new slogan stays legible in both language modes.
+- [x] Save the slogan-refresh checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
