@@ -490,8 +490,8 @@ body.dark-theme .ticker { border-color: transparent; background: #173c2d; color:
 body.dark-theme .ticker-dot { color: #d56846; }
 body.dark-theme .section-seal { border-color: transparent; box-shadow: none; }
 body.dark-theme .menu-card, body.dark-theme .menu-dialog { border-color: transparent; background: #172e26; }
-body.dark-theme .menu-card { box-shadow: none; }
-body.dark-theme .menu-card:hover { box-shadow: none; }
+body.dark-theme .menu-card { box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.34); }
+body.dark-theme .menu-card:hover { box-shadow: 10px 10px 0 #050e0a; }
 body.dark-theme .menu-card-copy strong, body.dark-theme .dialog-menu-list span { color: var(--ember); }
 body.dark-theme .dialog-close { background: #10251e; }
 body.dark-theme .menu-action-row { border-color: transparent; }

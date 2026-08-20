@@ -109,6 +109,12 @@
 - [x] Verify the simplified border treatment on desktop and mobile.
 - [x] Save the dark-border refinement checkpoint.
 
+## Menu Hover Shadow Restoration
+
+- [x] Restore hover shadows for the three borderless menu cards in dark mode.
+- [x] Verify the restored hover interaction.
+- [x] Save the hover-effect checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
