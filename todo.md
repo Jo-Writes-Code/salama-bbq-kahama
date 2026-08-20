@@ -87,6 +87,14 @@
 - [x] Verify the corrected image placement at desktop and mobile sizes.
 - [x] Save the corrected placement checkpoint.
 
+## Tanzania Localization & Controls
+
+- [x] Update the phone number, call wording, Tanzanian shilling prices, and Kahama location.
+- [x] Make the navigation call button green and add dark-mode plus EN/SW controls beside it.
+- [x] Implement English/Kiswahili text switching and persistent dark-mode styling.
+- [x] Verify the localized content and navigation controls on desktop and mobile.
+- [x] Save the Tanzania-localized checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

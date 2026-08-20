@@ -27,3 +27,11 @@ The supplied menu-photo update was visually checked. `veg-pizza.jfif` appears on
 The supplied grill photo was cropped before its white foreground and added immediately above the legal footer. Desktop and mobile checks show the cook and grill as the visible focus without the original white lower area.
 
 The placement correction was visually verified at desktop and mobile sizes. The cropped supplied grill photo now replaces the image in the “Fast food with a little fire in it.” section, and the duplicate bottom-of-page grill block has been removed.
+
+The EN/SW control was tested live. It updates the navigation, hero, menu, story, call-to-order text, and visit content into Kiswahili while preserving the Kahama, Shinyanga, Tanzania location and TZS prices.
+
+The dark-mode control was also tested live and persists its active state. The test identified a hero text-contrast issue in the dark theme, which is being corrected before delivery.
+
+The dark-theme correction was checked live. The Kiswahili hero title now renders in high-contrast cream and ember red, and the call-to-order button is cream with dark green text, while the dark navigation controls remain legible.
+
+The Tanzania-localized page was also checked at mobile size. The green navigation call CTA, TZS menu prices, Kahama, Shinyanga, Tanzania location, and compact theme/language controls remain readable and reachable.

@@ -1,7 +1,8 @@
 /*
   Salama BBQ — Ember Counter behavior
   Supports anchor-led single-page navigation, a compact mobile menu, active-section state,
-  a See Menu dialog, accessible reveals, parallax accents, and direct tel: calls. No React or framework runtime is used.
+  a See Menu dialog, accessible reveals, parallax accents, dark mode, English/Kiswahili switching,
+  and direct tel: calls. No React or framework runtime is used.
 */
 
 const header = document.querySelector('.site-header');
@@ -15,6 +16,90 @@ const menuClosers = [...document.querySelectorAll('[data-menu-close]')];
 const revealItems = [...document.querySelectorAll('[data-reveal]')];
 const parallaxItems = [...document.querySelectorAll('[data-parallax]')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const themeToggle = document.querySelector('[data-theme-toggle]');
+const languageToggle = document.querySelector('[data-lang-toggle]');
+const languageLabel = document.querySelector('[data-language-label]');
+const languageAlt = document.querySelector('[data-language-alt]');
+
+const translations = {
+  en: {
+    nav_home: 'Home', nav_menu: 'Menu', nav_our_way: 'Our Way', nav_visit: 'Visit', nav_visit_hours: 'Visit & Hours',
+    call_to_order: 'Call to order', hero_title_one: 'Flame first.', hero_title_two: 'Flavor follows.',
+    hero_description: 'Char-grilled chicken, colorful pours, and crisp chicken samosas. Call to order and we’ll fire it fresh.',
+    hero_hint: 'Fresh food. No accounts. No fuss.', ticker_one: 'SMASHED. SAUCED. SENT.', ticker_two: 'CALL TO ORDER', ticker_three: 'CHARCOAL, CRISP, & READY',
+    menu_kicker: 'Three good reasons', menu_title: 'Go with your craving.',
+    menu_intro: 'Pizza, grill smoke, and warm comfort plates. Hit See Menu for the whole board, then call to order.',
+    pizza_name: 'Vegetable Pizza', pizza_description: 'Roasted peppers, mushroom, red onion, sweetcorn, greens, and melty cheese.',
+    mshikaki_name: 'Chips Mshikaki', mshikaki_description: 'Char-grilled mshikaki skewers, golden chips, lime, and smoky chili sauce.',
+    ugali_name: 'Ugali & Beans', ugali_description: 'Soft ugali, rich tomato bean stew, charred greens, and fresh coriander.',
+    see_menu: 'See Menu', or_call: 'Or call', to_order: 'to order',
+    story_kicker: 'Our way', story_title: 'Fast food with a little fire in it.',
+    story_description: 'We believe quick can still be considered. That means hard-seared burgers, crispy chicken with a real crunch, and sauces with enough character to make you reach for a napkin.',
+    story_value_one: 'Hot food, every order', story_value_two: 'Simple, big ingredients', story_value_three: 'Order, then collect',
+    visit_kicker: 'Find us', visit_title: 'Meet us at the counter.', visit_description: 'Come hungry, call to order, and take the good stuff with you. Get your order, then get on with your day.',
+    location_label: 'Find the grill', hours_label: 'Hours', need_it: 'Need it soon?',
+    callout_one: 'Your order is a', callout_two: 'ring', callout_three: 'away.',
+    callout_description: 'Give us a call, tell us what sounds good, and we’ll get your order on the board.',
+    dialog_kicker: 'The full board', dialog_title: 'Pick your move.'
+  },
+  sw: {
+    nav_home: 'Mwanzo', nav_menu: 'Menyu', nav_our_way: 'Namna Yetu', nav_visit: 'Tufikie', nav_visit_hours: 'Tufikie & Saa',
+    call_to_order: 'Piga kuagiza', hero_title_one: 'Moto kwanza.', hero_title_two: 'Ladha inafuata.',
+    hero_description: 'Kuku wa kuchoma, vinywaji vya rangi na sambusa za kuku. Piga kuagiza, tutapika moto moto.',
+    hero_hint: 'Chakula kipya. Hakuna akaunti. Hakuna usumbufu.', ticker_one: 'CHOMA. MCHUZI. TUMA.', ticker_two: 'PIGA KUAGIZA', ticker_three: 'MAKAA, CRISPY, TAYARI',
+    menu_kicker: 'Sababu tatu za kuanza', menu_title: 'Chagua unachotamani.',
+    menu_intro: 'Pizza, harufu ya grill na sahani za kushibisha. Bonyeza Menyu kwa orodha yote, kisha piga kuagiza.',
+    pizza_name: 'Pizza ya Mboga', pizza_description: 'Pilipili, uyoga, kitunguu chekundu, mahindi, mboga za majani na jibini laini.',
+    mshikaki_name: 'Chipsi Mshikaki', mshikaki_description: 'Mshikaki wa kuchoma, chipsi za dhahabu, limau na mchuzi wa pilipili wa moshi.',
+    ugali_name: 'Ugali na Maharage', ugali_description: 'Ugali laini, maharage ya nyanya, mboga za kuchoma na dania safi.',
+    see_menu: 'Tazama Menyu', or_call: 'Au piga', to_order: 'kuagiza',
+    story_kicker: 'Namna yetu', story_title: 'Chakula cha haraka chenye moto wa kweli.',
+    story_description: 'Tunaamini chakula cha haraka kinaweza kutengenezwa kwa umakini. Burger za kuchoma, kuku crispy na michuzi yenye ladha halisi.',
+    story_value_one: 'Chakula cha moto kila oda', story_value_two: 'Viungo rahisi, vikubwa', story_value_three: 'Agiza, kisha chukua',
+    visit_kicker: 'Tupate', visit_title: 'Tukutane kaunta.', visit_description: 'Njoo na njaa, piga kuagiza, kisha chukua chakula kizuri. Chukua oda yako, endelea na siku yako.',
+    location_label: 'Pata grill', hours_label: 'Saa', need_it: 'Unahitaji haraka?',
+    callout_one: 'Agizo lako ni', callout_two: 'simu', callout_three: 'moja mbali.',
+    callout_description: 'Tupigie, tuambie unachotaka, nasi tutaweka oda yako kwenye grill.',
+    dialog_kicker: 'Menyu yote', dialog_title: 'Chagua unachotaka.'
+  }
+};
+
+function setTheme(theme) {
+  const isDark = theme === 'dark';
+  document.body.classList.toggle('dark-theme', isDark);
+  themeToggle?.setAttribute('aria-pressed', String(isDark));
+  themeToggle?.setAttribute('aria-label', isDark ? 'Activate light mode' : 'Activate dark mode');
+  localStorage.setItem('salama-theme', isDark ? 'dark' : 'light');
+}
+
+function setLanguage(language) {
+  const dictionary = translations[language];
+  if (!dictionary) return;
+
+  document.documentElement.lang = language;
+  document.querySelectorAll('[data-i18n]').forEach((element) => {
+    const key = element.dataset.i18n;
+    if (dictionary[key]) element.textContent = dictionary[key];
+  });
+
+  const isSwahili = language === 'sw';
+  languageLabel.textContent = isSwahili ? 'SW' : 'EN';
+  languageAlt.textContent = isSwahili ? 'EN' : 'SW';
+  languageToggle?.setAttribute('aria-pressed', String(isSwahili));
+  languageToggle?.setAttribute('aria-label', isSwahili ? 'Switch language to English' : 'Switch language to Kiswahili');
+  localStorage.setItem('salama-language', language);
+}
+
+themeToggle?.addEventListener('click', () => {
+  setTheme(document.body.classList.contains('dark-theme') ? 'light' : 'dark');
+});
+
+languageToggle?.addEventListener('click', () => {
+  setLanguage(document.documentElement.lang === 'sw' ? 'en' : 'sw');
+});
+
+setTheme(localStorage.getItem('salama-theme') || 'light');
+setLanguage(localStorage.getItem('salama-language') || 'en');
 
 function closeMenu() {
   document.body.classList.remove('menu-open');
