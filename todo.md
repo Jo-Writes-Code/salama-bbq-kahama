@@ -133,6 +133,14 @@
 - [x] Verify the mobile hero no longer protrudes beyond the image frame.
 - [x] Save the mobile hero-fit checkpoint.
 
+## Concise Calls & Scroll Cue
+
+- [x] Change all call-action button labels to Call/Piga while retaining order context in supporting text.
+- [x] Restore the hero’s near-black dark-mode border to match the lower call panel.
+- [x] Add a theme-aware gently bouncing scroll-down cue at the top of the page.
+- [x] Verify the bilingual labels, dark frame, and scroll cue across themes and viewports.
+- [x] Save the concise-calls and scroll-cue checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
