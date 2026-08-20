@@ -168,6 +168,10 @@
 - [x] Verify the production output has a deployable index and local image assets.
 - [x] Save the external-host deployment fix.
 
+## External Host Follow-up
+
+- [ ] In Vercel, redeploy the latest `main` branch or confirm the domain is linked to `Jo-Writes-Code/salama-bbq-kahama`; the public domain still returned Vercel’s `NOT_FOUND` page immediately after this configuration was pushed.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
