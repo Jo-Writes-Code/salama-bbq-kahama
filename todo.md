@@ -153,6 +153,14 @@
 - [x] Verify the cue stays visible at the top of the page across desktop and mobile viewport sizes.
 - [x] Save the viewport-anchored scroll-cue checkpoint.
 
+## Standalone Vanilla Project & Local Assets
+
+- [x] Audit the current static runtime and all remote image references.
+- [x] Move visual assets into a deployable local assets directory.
+- [x] Convert the runtime to standalone HTML, CSS, and vanilla JavaScript without React scaffolding.
+- [x] Verify local asset loading and responsive behavior in the standalone build.
+- [x] Save the standalone-project checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

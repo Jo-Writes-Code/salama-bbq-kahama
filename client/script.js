@@ -2,7 +2,7 @@
   Salama BBQ — Ember Counter behavior
   Supports anchor-led single-page navigation, a compact mobile menu, active-section state,
   a See Menu dialog, accessible reveals, parallax accents, dark mode, English/Kiswahili switching,
-  and direct tel: calls. No React or framework runtime is used.
+  and direct tel: calls. Everything runs through direct browser DOM APIs.
 */
 
 const header = document.querySelector('.site-header');
