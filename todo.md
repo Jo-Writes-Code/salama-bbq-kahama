@@ -147,6 +147,12 @@
 - [x] Verify the revised cue at desktop and mobile widths.
 - [x] Save the desktop scroll-cue correction checkpoint.
 
+## Viewport-Anchored Scroll Cue
+
+- [x] Reposition the scroll cue near the bottom of the viewport at every responsive width.
+- [x] Verify the cue stays visible at the top of the page across desktop and mobile viewport sizes.
+- [x] Save the viewport-anchored scroll-cue checkpoint.
+
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.

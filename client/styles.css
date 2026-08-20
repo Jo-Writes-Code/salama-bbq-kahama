@@ -283,10 +283,10 @@ button { font: inherit; }
 .hero-seal { right: 1.2rem; bottom: 1.2rem; color: var(--forest); }
 
 .scroll-cue {
-  position: absolute;
-  z-index: 32;
+  position: fixed;
+  z-index: 100;
   left: 50%;
-  bottom: 1.35rem;
+  bottom: clamp(1rem, 3vh, 2rem);
   display: grid;
   width: 46px;
   height: 46px;
@@ -304,14 +304,6 @@ button { font: inherit; }
 .scroll-cue svg { width: 21px; height: 21px; animation: scroll-nudge 1.7s var(--ease-in-out) infinite; }
 .scroll-cue:hover { background: var(--forest); color: var(--cream); }
 .scroll-cue.is-hidden { visibility: hidden; opacity: 0; pointer-events: none; }
-
-/* Ember Counter reminder: desktop cue is a persistent, high-contrast scroll invitation; mobile remains hero-bound. */
-@media (min-width: 901px) {
-  .scroll-cue {
-    position: fixed;
-    bottom: 1.5rem;
-  }
-}
 
 @keyframes scroll-nudge {
   0%, 100% { transform: translateY(-3px); }
@@ -606,7 +598,7 @@ body.dark-theme .utility-button:hover, body.dark-theme .language-toggle:hover { 
   .hero h1 { font-size: clamp(4.05rem, 18vw, 5.6rem); }
   .hero-actions { align-items: flex-start; flex-direction: column; }
   .hero-burst { right: 1rem; top: 1rem; }
-  .scroll-cue { bottom: 1rem; width: 42px; height: 42px; }
+  .scroll-cue { width: 42px; height: 42px; }
   .section { padding-inline: 0.9rem; }
   .section-title { font-size: clamp(3.3rem, 17vw, 4.6rem); }
   .menu-seal { right: 0; top: 0.4rem; width: 58px; height: 58px; }
