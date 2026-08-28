@@ -215,3 +215,13 @@
 - [x] Update the cards and See Menu dialog to use the revised prices; retain the full uploaded menu image in the dialog.
 - [x] Verify the updated product content and responsive layout.
 - [x] Save the product-update checkpoint.
+
+## Chicken & Chips, Ugali Nyama & Full-Screen Menu
+
+- [x] Copy the uploaded chips-kuku.png into the local assets bundle.
+- [x] Replace the second product image and use Chipsi Kuku/Chicken and Chips names in both languages.
+- [x] Rename the third product to Ugali Nyama/Meat & Ugali with appropriate translations.
+- [x] Make the menu view full-screen and image-only by removing the white dialog content elements.
+- [x] Add a slow up-and-down bounce to the See Menu button.
+- [x] Verify the bilingual content, full-screen menu image, button animation, and responsive interaction.
+- [x] Save the menu redesign checkpoint.
