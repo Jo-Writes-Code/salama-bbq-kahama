@@ -191,3 +191,17 @@
 ## Recovery Note
 
 - [x] Keep the project on the existing vanilla HTML, CSS, and JavaScript runtime; no backend or framework scaffold is needed for this update.
+
+## Uploaded Menu Image & Logo Favicon
+
+- [x] Copy the uploaded menu.png into the local deployable assets bundle.
+- [x] Show the uploaded menu image when the See Menu button opens the dialog.
+- [x] Use the Salama BBQ website logo as the favicon and remove the incorrect favicon reference.
+- [x] Verify the menu dialog image, favicon asset, and responsive presentation.
+- [x] Save the menu-image and favicon checkpoint.
+
+## Uploaded Menu Image Verification Follow-up
+
+- [x] Verify the uploaded menu-image dialog at desktop and mobile widths, including close and call controls.
+- [x] Confirm the logo favicon is served from the updated local asset path in the built site.
+- [x] Save a new checkpoint for the uploaded menu-image and logo-favicon update after verification passes.
