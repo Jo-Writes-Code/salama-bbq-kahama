@@ -37,7 +37,11 @@ body {
 
 body.menu-open { overflow: hidden; }
 
-a { color: inherit; text-decoration: none; }
+.loading-screen { display: none; }
+html.js-loading .loading-screen { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: var(--cream); color: var(--forest); font-family: var(--display); font-size: clamp(2.2rem, 8vw, 5rem); letter-spacing: 0.08em; text-transform: uppercase; }
+html.js-loading body > :not(.loading-screen) { visibility: hidden; }
+
+ a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 
 .skip-link {
@@ -445,8 +449,10 @@ button { font: inherit; }
 .menu-dialog-inner { position: relative; display: grid; width: 100%; height: 100%; place-items: center; padding: 0; }
 .dialog-close { position: fixed; z-index: 2; right: clamp(1rem, 3vw, 2.5rem); top: clamp(1rem, 3vw, 2.5rem); display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 1px solid rgba(247, 240, 223, 0.65); border-radius: 50%; background: rgba(5, 14, 10, 0.86); color: var(--cream); cursor: pointer; font-size: 1.8rem; line-height: 1; transition: background 160ms var(--ease-out), color 160ms var(--ease-out), border-color 160ms var(--ease-out); }
 .dialog-close:hover, .dialog-close:focus-visible { border-color: var(--mustard); background: var(--mustard); color: var(--forest); }
-.menu-dialog-image { width: 100%; height: 100%; margin: 0; overflow: hidden; border: 0; border-radius: 0; background: #050e0a; }
-.menu-dialog-image img { display: block; width: 100%; height: 100%; max-height: none; object-fit: contain; }
+.menu-dialog-image { width: 100%; height: 100%; margin: 0; overflow: hidden; border: 0; border-radius: 0; background: #050e0a; cursor: grab; touch-action: none; user-select: none; }
+.menu-dialog-image:active { cursor: grabbing; }
+.menu-dialog-image img { display: block; width: 100%; height: 100%; max-height: none; object-fit: contain; transform-origin: center; user-select: none; }
+.menu-dialog-image.is-zoomed img { transition: none; }
 .dialog-menu-list { display: none; }
 
 .story { background: var(--brick); color: var(--cream); }

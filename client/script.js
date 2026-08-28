@@ -20,6 +20,34 @@ const themeToggle = document.querySelector('[data-theme-toggle]');
 const languageToggle = document.querySelector('[data-lang-toggle]');
 const languageLabel = document.querySelector('[data-language-label]');
 const scrollCue = document.querySelector('.scroll-cue');
+const loadingScreen = document.querySelector('[data-loading]');
+let loadingTimer = 0;
+const menuZoomSurface = document.querySelector('[data-menu-zoom-surface]');
+const menuZoomImage = document.querySelector('[data-menu-zoom-image]');
+const menuPointers = new Map();
+let menuZoomScale = 1;
+let menuZoomX = 0;
+let menuZoomY = 0;
+let menuDragStart = null;
+let menuPinchStart = null;
+
+function showLoading() {
+  document.documentElement.classList.add('js-loading');
+  loadingScreen?.setAttribute('aria-hidden', 'false');
+}
+
+function finishLoading() {
+  if (loadingTimer) window.clearTimeout(loadingTimer);
+  document.documentElement.classList.remove('js-loading');
+  loadingScreen?.setAttribute('aria-hidden', 'true');
+}
+
+if (document.readyState === 'complete') {
+  finishLoading();
+} else {
+  loadingTimer = window.setTimeout(showLoading, 180);
+  window.addEventListener('load', finishLoading, { once: true });
+}
 
 const translations = {
   en: {
@@ -128,8 +156,136 @@ mobilePanel?.addEventListener('click', (event) => {
   if (event.target instanceof HTMLAnchorElement) closeMenu();
 });
 
+function clampMenuZoom(value) {
+  return Math.min(4, Math.max(1, value));
+}
+
+function menuSurfacePoint(clientX, clientY) {
+  const rect = menuZoomSurface?.getBoundingClientRect();
+  if (!rect) return { x: 0, y: 0 };
+  return {
+    x: clientX - rect.left - rect.width / 2,
+    y: clientY - rect.top - rect.height / 2,
+  };
+}
+
+function clampMenuPan() {
+  const rect = menuZoomSurface?.getBoundingClientRect();
+  if (!rect) return;
+  const maxX = rect.width * (menuZoomScale - 1) / 2;
+  const maxY = rect.height * (menuZoomScale - 1) / 2;
+  menuZoomX = Math.min(maxX, Math.max(-maxX, menuZoomX));
+  menuZoomY = Math.min(maxY, Math.max(-maxY, menuZoomY));
+}
+
+function applyMenuZoom() {
+  if (!menuZoomImage || !menuZoomSurface) return;
+  clampMenuPan();
+  menuZoomImage.style.transform = `translate3d(${menuZoomX}px, ${menuZoomY}px, 0) scale(${menuZoomScale})`;
+  menuZoomSurface.classList.toggle('is-zoomed', menuZoomScale > 1.01);
+}
+
+function resetMenuZoom() {
+  menuZoomScale = 1;
+  menuZoomX = 0;
+  menuZoomY = 0;
+  menuDragStart = null;
+  menuPinchStart = null;
+  menuPointers.clear();
+  applyMenuZoom();
+}
+
+function setMenuZoomAroundPoint(nextScale, point) {
+  const ratio = nextScale / menuZoomScale;
+  menuZoomX = point.x - (point.x - menuZoomX) * ratio;
+  menuZoomY = point.y - (point.y - menuZoomY) * ratio;
+  menuZoomScale = nextScale;
+  applyMenuZoom();
+}
+
+function pointerDistance(first, second) {
+  return Math.hypot(second.clientX - first.clientX, second.clientY - first.clientY);
+}
+
+function pointerMidpoint(first, second) {
+  return {
+    x: (first.clientX + second.clientX) / 2,
+    y: (first.clientY + second.clientY) / 2,
+  };
+}
+
+function beginMenuPinch() {
+  const [first, second] = [...menuPointers.values()];
+  if (!first || !second) return;
+  menuPinchStart = {
+    distance: Math.max(pointerDistance(first, second), 1),
+    scale: menuZoomScale,
+    center: menuSurfacePoint(...Object.values(pointerMidpoint(first, second))),
+    translateX: menuZoomX,
+    translateY: menuZoomY,
+  };
+}
+
+function handleMenuPointerDown(event) {
+  menuPointers.set(event.pointerId, event);
+  menuZoomSurface?.setPointerCapture?.(event.pointerId);
+  if (menuPointers.size === 1 && menuZoomScale > 1) {
+    menuDragStart = { x: event.clientX, y: event.clientY, translateX: menuZoomX, translateY: menuZoomY };
+  } else if (menuPointers.size === 2) {
+    menuDragStart = null;
+    beginMenuPinch();
+  }
+}
+
+function handleMenuPointerMove(event) {
+  if (!menuPointers.has(event.pointerId)) return;
+  menuPointers.set(event.pointerId, event);
+  if (menuPointers.size === 2) {
+    if (!menuPinchStart) beginMenuPinch();
+    const [first, second] = [...menuPointers.values()];
+    const midpoint = pointerMidpoint(first, second);
+    const center = menuSurfacePoint(midpoint.x, midpoint.y);
+    const nextScale = clampMenuZoom(menuPinchStart.scale * pointerDistance(first, second) / menuPinchStart.distance);
+    const ratio = nextScale / menuPinchStart.scale;
+    menuZoomX = center.x - (menuPinchStart.center.x - menuPinchStart.translateX) * ratio;
+    menuZoomY = center.y - (menuPinchStart.center.y - menuPinchStart.translateY) * ratio;
+    menuZoomScale = nextScale;
+    applyMenuZoom();
+  } else if (menuPointers.size === 1 && menuDragStart && menuZoomScale > 1) {
+    menuZoomX = menuDragStart.translateX + event.clientX - menuDragStart.x;
+    menuZoomY = menuDragStart.translateY + event.clientY - menuDragStart.y;
+    applyMenuZoom();
+  }
+}
+
+function handleMenuPointerUp(event) {
+  menuPointers.delete(event.pointerId);
+  if (menuPointers.size === 1) {
+    const remaining = [...menuPointers.values()][0];
+    menuDragStart = { x: remaining.clientX, y: remaining.clientY, translateX: menuZoomX, translateY: menuZoomY };
+    menuPinchStart = null;
+  } else {
+    menuDragStart = null;
+    menuPinchStart = null;
+  }
+}
+
+menuZoomSurface?.addEventListener('wheel', (event) => {
+  event.preventDefault();
+  const point = menuSurfacePoint(event.clientX, event.clientY);
+  const nextScale = clampMenuZoom(menuZoomScale * (event.deltaY < 0 ? 1.16 : 0.86));
+  setMenuZoomAroundPoint(nextScale, point);
+}, { passive: false });
+menuZoomSurface?.addEventListener('pointerdown', handleMenuPointerDown);
+menuZoomSurface?.addEventListener('pointermove', handleMenuPointerMove);
+menuZoomSurface?.addEventListener('pointerup', handleMenuPointerUp);
+menuZoomSurface?.addEventListener('pointercancel', handleMenuPointerUp);
+
 menuTriggers.forEach((trigger) => {
-  trigger.addEventListener('click', () => menuDialog?.showModal());
+  trigger.addEventListener('click', () => {
+    resetMenuZoom();
+    menuDialog?.showModal();
+  });
 });
 
 menuClosers.forEach((closer) => {
@@ -139,6 +295,7 @@ menuClosers.forEach((closer) => {
 menuDialog?.addEventListener('click', (event) => {
   if (event.target === menuDialog) menuDialog.close();
 });
+menuDialog?.addEventListener('close', resetMenuZoom);
 
 const observer = new IntersectionObserver(
   (entries) => {

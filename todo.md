@@ -225,3 +225,11 @@
 - [x] Add a slow up-and-down bounce to the See Menu button.
 - [x] Verify the bilingual content, full-screen menu image, button animation, and responsive interaction.
 - [x] Save the menu redesign checkpoint.
+
+## Menu Zoom & Loading State
+
+- [x] Add two-finger pinch zoom and pan support to the full-screen menu image on touch screens.
+- [x] Add mouse-wheel zoom and pan support to the full-screen menu image on laptops.
+- [x] Replace the initial @@ placeholder with a conditional Loading… state that clears after the page loads.
+- [x] Verify zoom controls, reset behavior, and loading-state timing across desktop and mobile.
+- [x] Save the interaction-update checkpoint.

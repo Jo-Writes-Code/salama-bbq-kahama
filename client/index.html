@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta name="description" content="Salama BBQ — big flavor, one quick call to order in Kahama, Shinyanga, Tanzania." />
-@@
     <link rel="icon" href="/assets/salama-bbq-mark.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +12,7 @@
     <title>Salama BBQ — Call to Order</title>
   </head>
   <body>
+    <div class="loading-screen" data-loading aria-live="polite" aria-hidden="true">Loading...</div>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -192,8 +192,8 @@
     <dialog class="menu-dialog" id="full-menu" aria-label="Salama BBQ full menu">
       <div class="menu-dialog-inner">
         <button class="dialog-close" type="button" data-menu-close aria-label="Close menu">×</button>
-        <figure class="menu-dialog-image">
-          <img src="/assets/menu.jpg" alt="Salama BBQ restaurant menu" />
+        <figure class="menu-dialog-image" data-menu-zoom-surface>
+          <img src="/assets/menu.jpg" alt="Salama BBQ restaurant menu" data-menu-zoom-image draggable="false" />
         </figure>
       </div>
     </dialog>
