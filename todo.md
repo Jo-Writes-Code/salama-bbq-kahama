@@ -205,3 +205,13 @@
 - [x] Verify the uploaded menu-image dialog at desktop and mobile widths, including close and call controls.
 - [x] Confirm the logo favicon is served from the updated local asset path in the built site.
 - [x] Save a new checkpoint for the uploaded menu-image and logo-favicon update after verification passes.
+
+## Product Pricing & Ugali Image Revision
+
+- [x] Change Vegetable Pizza price to TZS 1,500.
+- [x] Change Chips Mshikaki price to TZS 9,500.
+- [x] Change Ugali & Beans price to TZS 3,000.
+- [x] Replace the third product image with the uploaded ugali3.jpg in the local assets bundle.
+- [x] Update the cards and See Menu dialog to use the revised prices; retain the full uploaded menu image in the dialog.
+- [x] Verify the updated product content and responsive layout.
+- [x] Save the product-update checkpoint.
