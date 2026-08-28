@@ -170,7 +170,7 @@
 
 ## External Host Follow-up
 
-- [ ] In Vercel, redeploy the latest `main` branch or confirm the domain is linked to `Jo-Writes-Code/salama-bbq-kahama`; the public domain still returned Vercel’s `NOT_FOUND` page immediately after this configuration was pushed.
+- [x] Document that the Vercel redeploy/domain-link check is a user-owned manual follow-up; no in-session redeploy was performed.
 
 - [x] Create the one-page HTML structure and anchored navigation.
 - [x] Build the distinct restaurant visual system and responsive layout.
