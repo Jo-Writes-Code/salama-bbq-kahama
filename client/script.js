@@ -37,7 +37,7 @@ const translations = {
     story_description: 'We believe quick can still be considered. That means hard-seared burgers, crispy chicken with a real crunch, and sauces with enough character to make you reach for a napkin.',
     story_value_one: 'Hot food, every order', story_value_two: 'Simple, big ingredients', story_value_three: 'Order, then collect',
     visit_kicker: 'Find us', visit_title: 'Meet us at the counter.', visit_description: 'Come hungry, call to order, and take the good stuff with you. Get your order, then get on with your day.',
-    location_label: 'Find the grill', hours_label: 'Hours', need_it: 'Need it soon?',
+    location_label: 'Location', hours_label: 'Hours', need_it: 'Need it soon?',
     callout_one: 'Your order is a', callout_two: 'ring', callout_three: 'away.',
     callout_description: 'Give us a call, tell us what sounds good, and we’ll get your order on the board.',
     dialog_kicker: 'The full board', dialog_title: 'Pick your move.'
@@ -57,7 +57,7 @@ const translations = {
     story_description: 'Tunaamini chakula cha haraka kinaweza kutengenezwa kwa umakini. Burger za kuchoma, kuku crispy na michuzi yenye ladha halisi.',
     story_value_one: 'Chakula cha moto kila oda', story_value_two: 'Viungo rahisi, vikubwa', story_value_three: 'Agiza, kisha chukua',
     visit_kicker: 'Tupate', visit_title: 'Tukutane kaunta.', visit_description: 'Njoo na njaa, piga kuagiza, kisha chukua chakula kizuri. Chukua oda yako, endelea na siku yako.',
-    location_label: 'Pata grill', hours_label: 'Saa', need_it: 'Unahitaji haraka?',
+    location_label: 'Mahali', hours_label: 'Saa', need_it: 'Unahitaji haraka?',
     callout_one: 'Agizo lako ni', callout_two: 'simu', callout_three: 'moja mbali.',
     callout_description: 'Tupigie, tuambie unachotaka, nasi tutaweka oda yako kwenye grill.',
     dialog_kicker: 'Menyu yote', dialog_title: 'Chagua unachotaka.'
