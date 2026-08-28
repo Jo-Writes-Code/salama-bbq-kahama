@@ -177,3 +177,17 @@
 - [x] Add phone-first call-to-order links and polished JavaScript interactions.
 - [x] Validate smooth scrolling, mobile navigation, and accessible focus states.
 - [x] Capture a final preview and save a delivery checkpoint.
+
+## Contact Details, Location & Favicon
+
+- [x] Replace the location label with the appropriate English/Kiswahili translations.
+- [x] Add the provided Kahama address and open it in a new Google Maps tab.
+- [x] Replace the opening hours with Mon-Sat 8am-10pm in both languages.
+- [x] Replace every call CTA number with +255 711 616 811.
+- [x] Add the logo favicon to the local assets folder and wire it into the page head.
+- [x] Verify the updated content, links, favicon, and build across responsive views.
+- [x] Save the contact-details checkpoint.
+
+## Recovery Note
+
+- [x] Keep the project on the existing vanilla HTML, CSS, and JavaScript runtime; no backend or framework scaffold is needed for this update.
