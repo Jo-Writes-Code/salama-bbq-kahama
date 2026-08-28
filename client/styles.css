@@ -470,8 +470,8 @@ button { font: inherit; }
 .visit-meta svg { width: 20px; height: 20px; color: var(--mustard); }
 .visit-meta b { display: block; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
 .visit-meta span { display: block; margin-top: 0.2rem; color: rgba(247, 240, 223, 0.82); font-size: 0.9rem; line-height: 1.45; }
-.visit-address { color: inherit; text-decoration: underline; text-decoration-color: rgba(240, 191, 69, 0.72); text-decoration-thickness: 1px; text-underline-offset: 0.16em; transition: color 160ms var(--ease-out), text-decoration-color 160ms var(--ease-out); }
-.visit-address:hover, .visit-address:focus-visible { color: var(--mustard); text-decoration-color: currentColor; }
+.visit-meta .visit-address { display: block; margin-top: 0.2rem; color: rgba(247, 240, 223, 0.82); font-size: 0.9rem; line-height: 1.45; text-decoration: underline; text-decoration-color: rgba(240, 191, 69, 0.72); text-decoration-thickness: 1px; text-underline-offset: 0.2rem; transition: color 160ms var(--ease-out), text-decoration-color 160ms var(--ease-out); }
+.visit-meta .visit-address:hover, .visit-meta .visit-address:focus-visible { color: var(--mustard); text-decoration-color: currentColor; }
 
 .visit-call { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; transform: translate3d(0, var(--parallax-y, 0px), 0); will-change: transform; }
 .visit-call .section-kicker { color: var(--forest); }
